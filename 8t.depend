@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1588070926 source:c:\users\polina\desktop\8t\f.cpp
+	"f.h"
+
+1588070976 c:\users\polina\desktop\8t\f.h
+	<iomanip>
+	<iostream>
+	<stdlib.h>
+	<windows.h>
+
+1588071052 source:c:\users\polina\desktop\8t\main.cpp
+	"f.h"
+
