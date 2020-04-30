@@ -9,7 +9,7 @@ void Add(Derevo **u, int &a)
       p->left = 0;
       p->right = 0;
       *u = p;
-      cout<<"Ââåäèòå âåñ ýëåìåíòà "<<p->x<<" ";
+      cout<<"Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã¥Ã± Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  "<<p->x<<" ";
       cin>>p->ves;
       cout<<endl;
 
@@ -39,7 +39,7 @@ void Add(Derevo **u, int &a)
    else
     if (a>p1->x)
    p1->right = pnew;
-   cout<<"Ââåäèòå âåñ ýëåìåíòà "<<pnew->x<<" ";
+   cout<<"Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã¥Ã± Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  "<<pnew->x<<" ";
       cin>> pnew->ves;
       cout<<endl;
 }
@@ -62,25 +62,25 @@ if(root->ves==0) {d=0; }
 
 
     }
-Derevo* Delete(Derevo* node, int a)
+Derevo* Delete(Derevo* u, int a)
 {
-    if(node== NULL)
-        return node;
-    if(a==node->x)
+    if(u== NULL)
+        return u;
+    if(a==u->x)
     {
       Derevo* q;
 
-        if(node->right == NULL)
-            q = node->left;
+        if(u->right == NULL)
+            q = u->left;
         else
         {
-        Derevo* r = node->right;
+        Derevo* r = u->right;
 
             if(r->left == NULL)
 
             {
 
-                r->left = node->left;
+                r->left = u->left;
 
                 q = r;
 
@@ -98,18 +98,18 @@ Derevo* Delete(Derevo* node, int a)
                     m = r->left;
                 }
                 r->left   = m->right;
-                m->left  = node->left;
-                m->right = node->right;
+                m->left  = u->left;
+                m->right = u->right;
                 q = m;
             }
         }
-        delete node;
+        delete u;
         return q;
-    } else if(a< node->x)
-        node->left  = Delete(node->left, a);
+    } else if(a< u->x)
+        u->left  = Delete(u->left, a);
     else
-        node->right = Delete(node->right, a);
-    return node;
+    u->right = Delete(u->right, a);
+    return u;
 }
 void show(Derevo *t, int n)
 {
